@@ -1,0 +1,42 @@
+{
+  "Name": "IndieVPN Smart RU",
+  "GlobalProxy": "true",
+  "useChunkFiles": false,
+  "LastUpdated": "1790439664",
+  "RouteOrder": "block-proxy-direct",
+  "DirectSites": [
+    "geosite:private",
+    "geosite:ru-core",
+    "geosite:category-ru"
+  ],
+  "DirectIp": [
+    "geoip:private",
+    "geoip:ru"
+  ],
+  "ProxySites": [
+    "geosite:telegram",
+    "geosite:github",
+    "geosite:discord",
+    "geosite:whatsapp",
+    "geosite:banned-ru",
+    "geosite:hosting",
+    "geosite:youtube",
+    "geosite:ai",
+    "geosite:crypto",
+    "geosite:twitch",
+    "geosite:pinterest",
+    "geosite:google-play",
+    "geosite:category-geoblock-ru"
+  ],
+  "ProxyIp": [
+    "geoip:telegram",
+    "geoip:blocked-ru"
+  ],
+  "BlockSites": [
+    "geosite:category-ads"
+  ],
+  "BlockIp": [],
+  "DomainStrategy": "IPIfNonMatch",
+  "Geoipurl": "https://raw.githubusercontent.com/nehamoff/IndieVPN-GEO/main/geoip.dat",
+  "Geositeurl": "https://raw.githubusercontent.com/nehamoff/IndieVPN-GEO/main/geosite.dat"
+}

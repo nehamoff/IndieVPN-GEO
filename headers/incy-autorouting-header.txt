@@ -1,0 +1,1 @@
+autorouting: incy://autorouting/onadd/https://raw.githubusercontent.com/nehamoff/IndieVPN-GEO/main/profiles/indievpn-smart-ru.json

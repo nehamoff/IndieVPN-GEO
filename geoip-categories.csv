@@ -1,0 +1,6 @@
+﻿category,cidrs,ipv4,ipv6,inverse_match
+TELEGRAM,12,8,4,False
+PRIVATE,18,14,4,False
+BLOCKED-RU,1120,1120,0,False
+RU,25113,12956,12157,False
+WHITELIST,25113,12956,12157,False

@@ -1,0 +1,385 @@
+{
+  "files": {
+    "geosite": {
+      "path": "geosite.dat",
+      "bytes": 620453,
+      "sha256": "DA77FF75E347D98ECE47E568A15478BDB47C80BD36F9244E234B872A0870100C"
+    },
+    "geoip": {
+      "path": "geoip.dat",
+      "bytes": 805687,
+      "sha256": "00E30B8319F4C02461789B7FF63893A8D1469CC1E41125673180CC308E96C284"
+    }
+  },
+  "geosite": {
+    "category_count": 36,
+    "rule_count": 29147,
+    "categories": [
+      {
+        "category": "FACEIT",
+        "rules": 2,
+        "domain": 2,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "ESCAPEFROMTARKOV",
+        "rules": 3,
+        "domain": 3,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "ROBLOX",
+        "rules": 5,
+        "domain": 5,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "TWITCH-ADS",
+        "rules": 4,
+        "domain": 4,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "IP-CHECK",
+        "rules": 6,
+        "domain": 6,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "RIOT",
+        "rules": 8,
+        "domain": 8,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "ORIGIN",
+        "rules": 9,
+        "domain": 9,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "VPNDETECT",
+        "rules": 9,
+        "domain": 9,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "GOOGLE-PLAY",
+        "rules": 8,
+        "domain": 8,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "TORRENT",
+        "rules": 13,
+        "domain": 13,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "HOSTING",
+        "rules": 14,
+        "domain": 14,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "WHATSAPP",
+        "rules": 13,
+        "domain": 13,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "APPLE-CORE",
+        "rules": 18,
+        "domain": 18,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "TELEGRAM",
+        "rules": 21,
+        "domain": 21,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "AI-CORE",
+        "rules": 25,
+        "domain": 25,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "GOOGLE-DEEPMIND",
+        "rules": 25,
+        "domain": 25,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "EPICGAMES",
+        "rules": 30,
+        "domain": 30,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "DISCORD",
+        "rules": 28,
+        "domain": 28,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "BANNED-RU",
+        "rules": 46,
+        "domain": 46,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "MICROSOFT-CORE",
+        "rules": 49,
+        "domain": 49,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "PINTEREST",
+        "rules": 52,
+        "domain": 52,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "TWITCH",
+        "rules": 34,
+        "domain": 34,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "RU-CORE",
+        "rules": 81,
+        "domain": 81,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "STEAM",
+        "rules": 60,
+        "domain": 60,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "CRYPTO",
+        "rules": 96,
+        "domain": 96,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "GITHUB",
+        "rules": 64,
+        "domain": 64,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "PRIVATE",
+        "rules": 122,
+        "domain": 122,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "YOUTUBE",
+        "rules": 177,
+        "domain": 177,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "AI",
+        "rules": 193,
+        "domain": 193,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "WIN-SPY",
+        "rules": 327,
+        "domain": 327,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "MICROSOFT",
+        "rules": 736,
+        "domain": 736,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "CATEGORY-ADS",
+        "rules": 910,
+        "domain": 910,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "WHITELIST",
+        "rules": 1092,
+        "domain": 1092,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "CATEGORY-RU",
+        "rules": 1092,
+        "domain": 1092,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "APPLE",
+        "rules": 1788,
+        "domain": 1788,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      },
+      {
+        "category": "CATEGORY-GEOBLOCK-RU",
+        "rules": 21987,
+        "domain": 21987,
+        "full": 0,
+        "regex": 0,
+        "plain": 0,
+        "with_attributes": 0
+      }
+    ]
+  },
+  "geoip": {
+    "category_count": 5,
+    "cidr_count": 51376,
+    "categories": [
+      {
+        "category": "TELEGRAM",
+        "cidrs": 12,
+        "ipv4": 8,
+        "ipv6": 4,
+        "inverse_match": false
+      },
+      {
+        "category": "PRIVATE",
+        "cidrs": 18,
+        "ipv4": 14,
+        "ipv6": 4,
+        "inverse_match": false
+      },
+      {
+        "category": "BLOCKED-RU",
+        "cidrs": 1120,
+        "ipv4": 1120,
+        "ipv6": 0,
+        "inverse_match": false
+      },
+      {
+        "category": "RU",
+        "cidrs": 25113,
+        "ipv4": 12956,
+        "ipv6": 12157,
+        "inverse_match": false
+      },
+      {
+        "category": "WHITELIST",
+        "cidrs": 25113,
+        "ipv4": 12956,
+        "ipv6": 12157,
+        "inverse_match": false
+      }
+    ]
+  }
+}
