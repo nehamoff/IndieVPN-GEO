@@ -3,10 +3,10 @@
     <img src="./assets/indieproject-collaboration.png" alt="nehamoff × Indieproject" width="100%">
   </a>
 </p>
-<h1 align="center">🌍 IndieVPN GEO</h1>
+<h1 align="center">🌍 GeoIP и Geosite для Xray — маршрутизация VPN и RU-сайты напрямую</h1>
 
 <p align="center">
-  <strong>Открытая база маршрутизации для Xray-core, V2Ray и совместимых клиентов</strong>
+  <strong>Готовое раздельное туннелирование VPN для Xray-core, V2Ray, Happ, Incy и Remnawave</strong>
 </p>
 
 <p align="center">
@@ -23,10 +23,21 @@
   </a>
 </p>
 
-> **IndieVPN делится готовой базой маршрутизации:** российские сайты можно
-> отправить напрямую, заблокированные ресурсы — через VPN, рекламу и
-> телеметрию — заблокировать, а Telegram, YouTube, AI и игры — распределить
-> по отдельным серверам.
+**IndieVPN-GEO** — готовые файлы **geosite.dat** и **geoip.dat** для
+маршрутизации ВПН (VPN) и раздельного туннелирования (split tunneling). База
+помогает сделать российские сайты и приложения напрямую, мимо VPN, а
+YouTube, Telegram, Discord, AI-сервисы и заблокированные ресурсы отправить
+через VPN. Поддерживаются Xray-core, V2Ray, Happ, Incy, Remnawave и другие
+совместимые клиенты.
+
+Проект подойдёт, если вы искали:
+
+- как настроить маршрутизацию VPN;
+- как сделать RU-сайты мимо VPN;
+- как настроить раздельное туннелирование VPN на Windows, Android или iPhone;
+- где скачать **geosite.dat RU** и **geoip.dat Russia** для Xray/V2Ray;
+- как добавить маршрутизацию в Happ или Incy;
+- как раздавать GEO-файлы через подписку Remnawave.
 
 <p align="center">
   <a href="https://github.com/nehamoff/IndieVPN-GEO/raw/refs/heads/main/geosite.dat"><strong>⬇️ Скачать geosite.dat</strong></a>
@@ -784,6 +795,81 @@ IP и подсети:
 ~~~
 
 Собственные исключения размещайте перед большой категорией.
+
+## ❓ FAQ: маршрутизация VPN, split tunneling, GeoIP и Geosite
+
+### Что такое маршрутизация ВПН (VPN)?
+
+Маршрутизация VPN определяет, какой трафик идёт через VPN-сервер
+(**proxy**), какой открывается напрямую через провайдера (**direct**), а
+какой блокируется (**block**). Это также называют раздельным
+туннелированием VPN или **split tunneling**.
+
+### Как сделать российские сайты мимо VPN?
+
+Добавьте **geosite:CATEGORY-RU** и **geosite:RU-CORE** в доменные правила
+direct, а **geoip:RU** — в IP-правила direct. Исключения
+**CATEGORY-GEOBLOCK-RU**, **BANNED-RU** и **BLOCKED-RU** должны стоять выше и
+идти через proxy. Готовый вариант находится в разделе
+[Россия мимо VPN, всё остальное через VPN](#-1-россия-мимо-vpn-всё-остальное-через-vpn).
+
+### Happ маршрутизация: как подключить GEO-файлы?
+
+Используйте готовый
+[профиль IndieVPN Smart RU](./profiles/indievpn-smart-ru.json) или скопируйте
+[Happ routing-заголовок](./headers/happ-routing-header.txt) в ответ
+подписки. Happ загрузит **geoip.dat** и **geosite.dat** с GitHub и применит
+категории direct/proxy/block. Это подходит для Happ на Windows, Android,
+iOS/iPhone, macOS и Linux.
+
+### Как настроить раздельное туннелирование VPN на Android, iPhone или Windows?
+
+Если клиент работает на Xray и понимает профили Happ/Incy, добавьте
+подписку с готовыми заголовками из этого репозитория. Политика будет общей
+для телефона и компьютера: российские сервисы напрямую, выбранные
+зарубежные и заблокированные ресурсы через VPN. Маршрутизация отдельных
+приложений дополнительно настраивается в интерфейсе самого клиента.
+
+### Где скачать geosite.dat и geoip.dat для Xray/V2Ray?
+
+- [Скачать geosite.dat](https://raw.githubusercontent.com/nehamoff/IndieVPN-GEO/main/geosite.dat)
+- [Скачать geoip.dat](https://raw.githubusercontent.com/nehamoff/IndieVPN-GEO/main/geoip.dat)
+
+Это прямые GitHub Raw-ссылки: их можно вставить в Happ, Incy, Xray,
+V2RayNG, V2RayN или систему обновления своего VPN-сервиса.
+
+### Чем GeoIP отличается от Geosite?
+
+**Geosite** сопоставляет доменные имена: сайты, API и CDN. **GeoIP**
+сопоставляет IPv4/IPv6-подсети. Для надёжной маршрутизации используются оба
+файла: приложение может обратиться к домену либо сразу к IP-адресу.
+
+### Почему Happ пишет «не удалось загрузить GEO-файлы»?
+
+Проверьте, что обе GitHub Raw-ссылки открываются без авторизации и возвращают
+HTTP 200. Затем обновите подписку или повторно импортируйте профиль с новым
+**LastUpdated**. Happ скачивает GEO-файлы в фоне; медленное соединение или
+блокировка **raw.githubusercontent.com** может прервать загрузку.
+
+### Как добавить GeoIP и Geosite в подписку Remnawave?
+
+Добавьте готовые заголовки **routing** и **autorouting** в Subscription
+Response Headers либо в отдельные Response Rules для Happ и Incy.
+Пошаговый пример находится в разделе
+[Встройка в Remnawave](#-встройка-в-remnawave).
+
+### Как пустить YouTube и Telegram через VPN, а банки и Госуслуги напрямую?
+
+Добавьте **geosite:YOUTUBE** и **geosite:TELEGRAM** в proxy, а
+**geoip:TELEGRAM** — в IP-правила proxy. Категории **RU-CORE**,
+**CATEGORY-RU** и **geoip:RU** оставьте в direct. Proxy-исключения должны
+располагаться выше общих российских direct-правил.
+
+### Подойдут ли эти файлы для Xray, V2Ray, VLESS и Reality?
+
+Да. DAT-файлы относятся к механизму маршрутизации Xray/V2Ray и не зависят
+от транспорта подключения. Их можно использовать с VLESS, VMess, Trojan,
+Shadowsocks и Reality, если выбранный клиент умеет загружать GeoIP/Geosite.
 
 ## ❗ Типичные ошибки
 
